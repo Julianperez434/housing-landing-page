@@ -1,0 +1,372 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap";
+@keyframes floatingHero {
+  0% {
+    transform: translateY(-1em);
+  }
+  100% {
+    transform: translateY(1em);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 2em 1em 1em 1em;
+  height: 3000px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #092a59;
+  padding: 1em 3em;
+  border-radius: 0 0 1em 1em;
+  position: fixed;
+  top: 0;
+  left: 1em;
+  right: 1em;
+  z-index: 20;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+#header-img {
+  width: 2em;
+  aspect-ratio: 1;
+}
+
+#title {
+  color: #fff;
+  font-weight: 700;
+}
+
+#nav-bar ul {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+#nav-bar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.25em 1em;
+  border-radius: 2em;
+  transition: 0.15s all ease;
+}
+#nav-bar ul li a:hover {
+  background-color: #fd5056;
+}
+#nav-bar ul li a:visited {
+  color: #fff;
+}
+
+section[id=hero] {
+  background-color: #092a59;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3em;
+  height: 38em;
+  gap: 2em;
+  border-radius: 2em;
+  position: relative;
+  overflow: hidden;
+}
+section[id=hero] h1 {
+  font-size: 2.5rem;
+  width: 8em;
+  text-wrap: balance;
+  z-index: 2;
+}
+section[id=hero] p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  width: 26em;
+  line-height: 2rem;
+  z-index: 2;
+}
+
+#hero-img {
+  position: absolute;
+  right: -30em;
+  top: 0em;
+  z-index: 0;
+  animation: 2s floatingHero ease-in-out alternate infinite;
+}
+
+#form {
+  z-index: 2;
+}
+#form input {
+  padding: 0.75em 2em;
+  border-radius: 1em;
+  border: none;
+  width: 30em;
+  box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+}
+#form button {
+  padding: 0.75em 2em;
+  border-radius: 1em;
+  background-color: #fd5056;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.15s all ease;
+  border: none;
+}
+#form button:hover {
+  opacity: 0.9;
+}
+
+.honeypot {
+  display: none;
+}
+
+section[id=mini-gallery] {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin: 5em 0;
+}
+section[id=mini-gallery] .gallery-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+section[id=mini-gallery] .gallery-text__1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+}
+section[id=mini-gallery] .gallery-text__2 {
+  font-weight: 300;
+  font-size: 1.75rem;
+}
+section[id=mini-gallery] img {
+  width: 10em;
+  height: 10em;
+  object-fit: cover;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 1s all ease;
+}
+section[id=mini-gallery] img:hover {
+  transform: translateY(-1em);
+}
+
+#video-section h2 {
+  color: #092a59;
+  font-size: 2rem;
+  width: 10em;
+  margin-bottom: 1em;
+}
+#video-section iframe {
+  width: 80%;
+  aspect-ratio: 1.7777777778;
+  display: block;
+}
+#video-section button {
+  padding: 0.75em 2em;
+  border-radius: 1em;
+  background-color: #fd5056;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.15s all ease;
+  border: none;
+  margin: 1em 0;
+}
+#video-section button:hover {
+  opacity: 0.9;
+}
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  color: #092a59;
+}
+#gallery h2 {
+  font-size: 2rem;
+}
+
+.card-container {
+  margin: 2em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+.card-container .card {
+  border-radius: 1em;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.card-container .card:hover {
+  flex: 2;
+}
+.card-container .card img {
+  width: 100%;
+  aspect-ratio: 1.3333333333;
+  object-fit: cover;
+}
+.card-container .card__text {
+  padding: 1em;
+}
+.card-container .card__text p {
+  font-size: 0.75rem;
+}
+.card-container .card__text button {
+  margin-top: 1em;
+  border: 0.15em solid #5e95e3;
+  background-color: #fff;
+  color: #5e95e3;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.15s all ease;
+}
+.card-container .card__text button:hover {
+  background-color: #5e95e3;
+  color: #fff;
+}
+
+.faq {
+  display: flex;
+  background-color: #092a59;
+  color: #fff;
+  padding: 5em;
+  margin: 5em 2em;
+  border-radius: 2em;
+}
+
+.faq__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2em;
+}
+.faq__left h2 {
+  font-size: 2rem;
+}
+.faq__left h3 {
+  font-weight: 300;
+  margin-top: -2em;
+}
+.faq__left p {
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+.faq__left button {
+  padding: 0.75em 2em;
+  border-radius: 1em;
+  background-color: #fd5056;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.15s all ease;
+  border: none;
+}
+.faq__left button:hover {
+  opacity: 0.9;
+}
+
+.faq__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: #fff;
+  color: #092a59;
+  padding: 2em;
+  border-radius: 2em;
+  border-top: 0.5em solid #5e95e3;
+  margin-left: 1em;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.accordion-container summary {
+  font-weight: bold;
+}
+.accordion-container p {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  color: #092a59;
+  margin: 2em;
+  grid-gap: 1em;
+}
+footer #firstColumn {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+footer .column {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+footer .column p {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 650px) {
+  #nav-bar {
+    display: none;
+  }
+
+  #faq {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .faq__left {
+    width: 100%;
+  }
+
+  .faq__right {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .accordion-container {
+    width: 100%;
+  }
+
+  #form button {
+    margin-top: 1em;
+  }
+}
